@@ -23,18 +23,27 @@ window.addEventListener("DOMContentLoaded", () => {
     
         vapeItem.innerHTML = `
             <div class="portfolio-item mx-auto">
-                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                <!-- Image container (hover effect only applies here) -->
+                <div class="image-container position-relative">
+                    <img class="img-fluid vape-image" src="${vape.image}" alt="${vape.name}" />
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
                 </div>
-                <img class="img-fluid" src="${vape.image}" alt="${vape.name}" />
-                <div class="text-center mt-2">
+
+                <!-- Information container (this stays visible, outside hover effect) -->
+                <div class="info-container text-center mt-2">
                     <h5>${vape.name}</h5>
                     <p class="fw-bold text-secondary">${vape.price}</p>
-                    <a href="${vape.whatsappLink}" target="_blank" class="btn btn-warning">Comprar por WhatsApp</a>
+                    <a href="${vape.whatsappLink}" target="_blank" class="btn btn-warning buy-button">
+                        Comprar por WhatsApp
+                    </a>
                 </div>
             </div>
         `;
-    
+
         vapeContainer.appendChild(vapeItem);
     });
 
