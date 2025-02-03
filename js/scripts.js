@@ -20,19 +20,21 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const vapeItem = document.createElement("div");
         vapeItem.classList.add("col-md-6", "col-lg-4", "mb-5");
-
+    
         vapeItem.innerHTML = `
-            <div class="portfolio-item mx-auto p-3 border rounded shadow-sm">
-                <div class="text-center">
-                    <img class="img-fluid" src="${vape.image}" alt="${vape.name}" />
+            <div class="portfolio-item mx-auto">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                 </div>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                    <a href="${vape.whatsappLink}" target="_blank" class="btn btn-warning btn-sm">Comprar por WhatsApp</a>
-                    <span class="fw-bold text-secondary">${vape.price ? vape.price : "No price"}</span>
+                <img class="img-fluid" src="${vape.image}" alt="${vape.name}" />
+                <div class="text-center mt-2">
+                    <h5>${vape.name}</h5>
+                    <p class="fw-bold text-secondary">${vape.price}</p>
+                    <a href="${vape.whatsappLink}" target="_blank" class="btn btn-warning">Comprar por WhatsApp</a>
                 </div>
             </div>
         `;
-
+    
         vapeContainer.appendChild(vapeItem);
     });
 
