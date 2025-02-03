@@ -1,0 +1,45 @@
+/* Change Navbar Background */
+#mainNav {
+    background-color: black !important;
+}
+
+/* Update Hero Section */
+.masthead {
+    background-color: black !important;
+}
+
+.masthead h1, 
+.masthead p {
+    color: white !important;
+}
+
+/* Change Button Colors */
+.btn-primary {
+    background-color: #FFD700 !important;
+    border-color: #FFD700 !important;
+    color: black !important;
+}
+
+.btn-primary:hover {
+    background-color: #FFC107 !important;
+}
+
+/* Portfolio (Product) Section */
+.portfolio {
+    background-color: black;
+}
+
+.portfolio h2 {
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+}
+
+/* Font Override */
+body {
+    font-family: 'Poppins', sans-serif;
+}
